@@ -1,0 +1,185 @@
+#: .\catalog\models.py:11
+msgid "Name"
+msgstr ""
+
+#: .\catalog\models.py:21
+msgid "title"
+msgstr ""
+
+#: .\catalog\models.py:28
+msgid "summary"
+msgstr ""
+
+#: .\catalog\models.py:29 .\catalog\templates\catalog\book_detail.html:9
+msgid "ISBN"
+msgstr ""
+
+#: .\catalog\models.py:49 .\catalog\templates\catalog\book_detail.html:11
+msgid "Genre"
+msgstr ""
+
+#: .\catalog\models.py:57
+msgid "imprint"
+msgstr ""
+
+#: .\catalog\models.py:61
+msgid "Maintenance"
+msgstr ""
+
+#: .\catalog\models.py:62
+msgid "On loan"
+msgstr ""
+
+#: .\catalog\models.py:63
+msgid "Available"
+msgstr ""
+
+#: .\catalog\models.py:64
+msgid "Reserved"
+msgstr ""
+
+#: .\catalog\models.py:67
+msgid "status"
+msgstr ""
+
+#: .\catalog\models.py:85
+msgid "first_name"
+msgstr ""
+
+#: .\catalog\models.py:86
+msgid "last_name"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:6
+msgid "Local Library"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:22
+msgid "Home"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:23
+msgid "All books"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:24
+msgid "All authors"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:40
+#, python-format
+msgid ""
+"\n"
+"              Page %(page_obj.number)s of %(page_obj.paginator.num_pages)s.\n"
+"              "
+msgstr ""
+
+#: .\catalog\templates\catalog\author_detail.html:5
+#: .\catalog\templates\catalog\book_detail.html:7
+msgid "Author"
+msgstr ""
+
+#: .\catalog\templates\catalog\author_detail.html:9
+msgid "Books"
+msgstr ""
+
+#: .\catalog\templates\catalog\author_list.html:5
+msgid "Author List"
+msgstr ""
+
+#: .\catalog\templates\catalog\author_list.html:16
+msgid ""
+"\n"
+"  There are no author in the library.\n"
+"  "
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:5
+msgid "Title:"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:8
+msgid "Summary"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:10
+msgid "Language"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:14
+msgid "Copies"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:23
+msgid "Due to be returned:"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_detail.html:25
+msgid "Imprint:"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_list.html:5
+msgid "Book List"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_list.html:15
+msgid "There are no books in the library."
+msgstr ""
+
+#: .\catalog\templates\index.html:12
+msgid "Local Library New Title"
+msgstr ""
+
+#: .\catalog\templates\index.html:16
+msgid "Local Library Home"
+msgstr ""
+
+#: .\catalog\templates\index.html:17
+msgid ""
+"Welcome to LocalLibrary, a website developed by <em>Mozilla Developer "
+"Network</em>!"
+msgstr ""
+
+#: .\catalog\templates\index.html:18
+msgid "Dynamic content"
+msgstr ""
+
+#: .\catalog\templates\index.html:19
+msgid "The library has the following record counts:"
+msgstr ""
+
+#: .\catalog\templates\index.html:21
+msgid "Books:"
+msgstr ""
+
+#: .\catalog\templates\index.html:22
+msgid "Copies:"
+msgstr ""
+
+#: .\catalog\templates\index.html:23
+msgid "Copies available:"
+msgstr ""
+
+#: .\catalog\templates\index.html:24
+msgid "Authors:"
+msgstr ""
+
+#: .\catalog\templates\index.html:25
+msgid "Genres:"
+msgstr ""
+
+#: .\catalog\templates\index.html:26
+msgid "Books that contain a particular word 'Python':"
+msgstr ""
+
+#: .\catalog\views.py:55 .\catalog\views.py:79
+msgid "This is just some data"
+msgstr ""
+
+#: .\locallibrary\settings.py:136
+msgid "English"
+msgstr ""
+
+#: .\locallibrary\settings.py:137
+msgid "VietNamese"
+msgstr ""
