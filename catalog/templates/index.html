@@ -6,23 +6,25 @@
 
 {% load static %}
 <img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram"
-    style="width:555px;height:540px;" />
+  style="width:555px;height:540px;" />
 
 {% block title %}
-    <title>{% trans "Local Library New Title" %}</title>
+<title>{% trans "Local Library New Title" %}</title>
 {% endblock %}
 
 {% block content %}
-    <h1>{% trans "Local Library Home" %}</h1>
-    <p>{% trans "Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!" %}</p>
-    <h2>{% trans "Dynamic content" %}</h2>
-    <p>{% trans "The library has the following record counts:" %}</p>
-    <ul>
-        <li><strong>{% trans "Books:" %}</strong> {{ num_books }}</li>
-        <li><strong>{% trans "Copies:" %}</strong> {{ num_instances }}</li>
-        <li><strong>{% trans "Copies available:" %}</strong> {{ num_instances_available }}</li>
-        <li><strong>{% trans "Authors:" %}</strong> {{ num_authors }}</li>
-        <li><strong>{% trans "Genres:" %}</strong> {{ num_genres }}</li>
-        <li><strong>{% trans "Books that contain a particular word 'Python':" %}</strong> {{ num_books_containing_word }}</li>
-    </ul>
+<h1>{% trans "Local Library Home" %}</h1>
+<p>{% trans "Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!" %}</p>
+<h2>{% trans "Dynamic content" %}</h2>
+<p>{% trans "The library has the following record counts:" %}</p>
+<ul>
+  <li><strong>{% trans "Books:" %}</strong> {{ num_books }}</li>
+  <li><strong>{% trans "Copies:" %}</strong> {{ num_instances }}</li>
+  <li><strong>{% trans "Copies available:" %}</strong> {{ num_instances_available }}</li>
+  <li><strong>{% trans "Authors:" %}</strong> {{ num_authors }}</li>
+  <li><strong>{% trans "Genres:" %}</strong> {{ num_genres }}</li>
+  <li><strong>{% trans "Books that contain a particular word 'Python':" %}</strong> {{ num_books_containing_word }}</li>
+</ul>
+
+<p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
 {% endblock %}
