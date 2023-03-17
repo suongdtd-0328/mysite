@@ -1,3 +1,9 @@
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from catalog.models import BookInstance
+from django.contrib.auth.decorators import login_required, permission_required
+from django.utils.decorators import method_decorator
+from django.views.generic import ListView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import generic
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
@@ -91,3 +97,29 @@ class AuthorDetailView(generic.DetailView):
     def author_detail_view(request, primary_key):
         author = get_object_or_404(Author, pk=primary_key)
         return render(request, 'catalog/author_detail.html', context={'author': author})
+
+
+class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
+    """Generic class-based view listing books on loan to current user."""
+    model = BookInstance
+    template_name = 'catalog/bookinstance_list_borrowed_user.html'
+    paginate_by = 10
+
+    def get_queryset(self):
+        return (
+            BookInstance.objects.filter(borrower=self.request.user)
+            .filter(status__exact='o')
+            .order_by('due_back')
+        )
+
+
+@method_decorator(login_required, name='dispatch')
+@method_decorator(permission_required('catalog.can_mark_returned'), name='dispatch')
+class BorrowedBooksListView(ListView):
+    model = BookInstance
+    template_name = 'catalog/borrowed_books.html'
+    permission_required = 'catalog.can_mark_returned'
+    paginate_by = 10
+
+    def get_queryset(self):
+        return BookInstance.objects.filter(status__exact='o').order_by('due_back')
