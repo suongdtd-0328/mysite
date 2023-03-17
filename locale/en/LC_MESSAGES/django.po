@@ -1,56 +1,75 @@
-#: .\catalog\models.py:11
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-21 09:17+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\catalog\models.py:14
 msgid "Name"
 msgstr ""
 
-#: .\catalog\models.py:21
+#: .\catalog\models.py:24
 msgid "title"
 msgstr ""
 
-#: .\catalog\models.py:28
+#: .\catalog\models.py:31
 msgid "summary"
 msgstr ""
 
-#: .\catalog\models.py:29 .\catalog\templates\catalog\book_detail.html:9
+#: .\catalog\models.py:32 .\catalog\templates\catalog\book_detail.html:9
 msgid "ISBN"
 msgstr ""
 
-#: .\catalog\models.py:49 .\catalog\templates\catalog\book_detail.html:11
+#: .\catalog\models.py:52 .\catalog\templates\catalog\book_detail.html:11
 msgid "Genre"
 msgstr ""
 
-#: .\catalog\models.py:57
+#: .\catalog\models.py:60
 msgid "imprint"
 msgstr ""
 
-#: .\catalog\models.py:61
+#: .\catalog\models.py:64
 msgid "Maintenance"
 msgstr ""
 
-#: .\catalog\models.py:62
+#: .\catalog\models.py:65
 msgid "On loan"
 msgstr ""
 
-#: .\catalog\models.py:63
+#: .\catalog\models.py:66
 msgid "Available"
 msgstr ""
 
-#: .\catalog\models.py:64
+#: .\catalog\models.py:67
 msgid "Reserved"
 msgstr ""
 
-#: .\catalog\models.py:67
+#: .\catalog\models.py:70
 msgid "status"
 msgstr ""
 
-#: .\catalog\models.py:85
+#: .\catalog\models.py:96
 msgid "first_name"
 msgstr ""
 
-#: .\catalog\models.py:86
+#: .\catalog\models.py:97
 msgid "last_name"
 msgstr ""
 
-#: .\catalog\templates\base_generic.html:6
+#: .\catalog\templates\base_generic.html:6 .\catalog\templates\index.html:12
 msgid "Local Library"
 msgstr ""
 
@@ -66,12 +85,28 @@ msgstr ""
 msgid "All authors"
 msgstr ""
 
-#: .\catalog\templates\base_generic.html:40
-#, python-format
-msgid ""
-"\n"
-"              Page %(page_obj.number)s of %(page_obj.paginator.num_pages)s.\n"
-"              "
+#: .\catalog\templates\base_generic.html:28
+msgid "My Borrowed"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:29
+msgid "Logout"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:31
+msgid "Login"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:35
+msgid "All Borrowed"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:49
+msgid "previous"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:55
+msgid "next"
 msgstr ""
 
 #: .\catalog\templates\catalog\author_detail.html:5
@@ -126,8 +161,14 @@ msgstr ""
 msgid "There are no books in the library."
 msgstr ""
 
-#: .\catalog\templates\index.html:12
-msgid "Local Library New Title"
+#: .\catalog\templates\catalog\bookinstance_list_borrowed_user.html:4
+#: .\catalog\templates\catalog\borrowed_books.html:4
+msgid "Borrowed books"
+msgstr ""
+
+#: .\catalog\templates\catalog\bookinstance_list_borrowed_user.html:17
+#: .\catalog\templates\catalog\borrowed_books.html:18
+msgid "There are no books borrowed."
 msgstr ""
 
 #: .\catalog\templates\index.html:16
@@ -172,7 +213,7 @@ msgstr ""
 msgid "Books that contain a particular word 'Python':"
 msgstr ""
 
-#: .\catalog\views.py:55 .\catalog\views.py:79
+#: .\catalog\views.py:66 .\catalog\views.py:90
 msgid "This is just some data"
 msgstr ""
 

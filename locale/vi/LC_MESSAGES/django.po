@@ -1,56 +1,75 @@
-#: .\catalog\models.py:11
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-21 09:17+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: .\catalog\models.py:14
 msgid "Name"
 msgstr "Tên"
 
-#: .\catalog\models.py:21
+#: .\catalog\models.py:24
 msgid "title"
 msgstr "Tiêu đề"
 
-#: .\catalog\models.py:28
+#: .\catalog\models.py:31
 msgid "summary"
-msgstr "Sơ lược"
+msgstr "sơ lược"
 
-#: .\catalog\models.py:29 .\catalog\templates\catalog\book_detail.html:9
+#: .\catalog\models.py:32 .\catalog\templates\catalog\book_detail.html:9
 msgid "ISBN"
 msgstr "ISBN"
 
-#: .\catalog\models.py:49 .\catalog\templates\catalog\book_detail.html:11
+#: .\catalog\models.py:52 .\catalog\templates\catalog\book_detail.html:11
 msgid "Genre"
 msgstr "Thể loại"
 
-#: .\catalog\models.py:57
+#: .\catalog\models.py:60
 msgid "imprint"
 msgstr "imprint"
 
-#: .\catalog\models.py:61
+#: .\catalog\models.py:64
 msgid "Maintenance"
 msgstr "Bảo trì"
 
-#: .\catalog\models.py:62
+#: .\catalog\models.py:65
 msgid "On loan"
-msgstr "Cho mượn"
+msgstr "Đang cho mượn"
 
-#: .\catalog\models.py:63
+#: .\catalog\models.py:66
 msgid "Available"
 msgstr "Có sẵn"
 
-#: .\catalog\models.py:64
+#: .\catalog\models.py:67
 msgid "Reserved"
 msgstr "Đặt trước"
 
-#: .\catalog\models.py:67
+#: .\catalog\models.py:70
 msgid "status"
 msgstr "Trạng thái"
 
-#: .\catalog\models.py:85
+#: .\catalog\models.py:96
 msgid "first_name"
-msgstr "Họ"
+msgstr "họ"
 
-#: .\catalog\models.py:86
+#: .\catalog\models.py:97
 msgid "last_name"
-msgstr "Tên"
+msgstr "tên"
 
-#: .\catalog\templates\base_generic.html:6
+#: .\catalog\templates\base_generic.html:6 .\catalog\templates\index.html:12
 msgid "Local Library"
 msgstr "Thư viện địa phương"
 
@@ -66,16 +85,29 @@ msgstr "Tất cả sách"
 msgid "All authors"
 msgstr "Tất cả tác giả"
 
-#: .\catalog\templates\base_generic.html:40
-#, python-format
-msgid ""
-"\n"
-"              Page %(page_obj.number)s of %(page_obj.paginator.num_pages)s.\n"
-"              "
-msgstr ""
-"\n"
-"              Trang %(page_obj.number)s %(page_obj.paginator.num_pages)s.\n"
-"              "
+#: .\catalog\templates\base_generic.html:28
+msgid "My Borrowed"
+msgstr "Sách đã mượn của tôi"
+
+#: .\catalog\templates\base_generic.html:29
+msgid "Logout"
+msgstr "Đăng xuất"
+
+#: .\catalog\templates\base_generic.html:31
+msgid "Login"
+msgstr "Đăng nhập"
+
+#: .\catalog\templates\base_generic.html:35
+msgid "All Borrowed"
+msgstr "Tất cả sách đã mượn"
+
+#: .\catalog\templates\base_generic.html:49
+msgid "previous"
+msgstr "Trước"
+
+#: .\catalog\templates\base_generic.html:55
+msgid "next"
+msgstr "Sau"
 
 #: .\catalog\templates\catalog\author_detail.html:5
 #: .\catalog\templates\catalog\book_detail.html:7
@@ -97,12 +129,12 @@ msgid ""
 "  "
 msgstr ""
 "\n"
-"  Không có tác giả nào trong thư viện.\n"
+"  Không có sách nào trong thư viện.\n"
 "  "
 
 #: .\catalog\templates\catalog\book_detail.html:5
 msgid "Title:"
-msgstr "Thể loại"
+msgstr "Tiêu đề:"
 
 #: .\catalog\templates\catalog\book_detail.html:8
 msgid "Summary"
@@ -118,7 +150,7 @@ msgstr "Bản sao"
 
 #: .\catalog\templates\catalog\book_detail.html:23
 msgid "Due to be returned:"
-msgstr "Đến hạn trả"
+msgstr "Ngày đến hạn:"
 
 #: .\catalog\templates\catalog\book_detail.html:25
 msgid "Imprint:"
@@ -126,26 +158,32 @@ msgstr "Imprint"
 
 #: .\catalog\templates\catalog\book_list.html:5
 msgid "Book List"
-msgstr "Danh sách Sách"
+msgstr "Danh sách sách"
 
 #: .\catalog\templates\catalog\book_list.html:15
 msgid "There are no books in the library."
 msgstr "Không có sách nào trong thư viện"
 
-#: .\catalog\templates\index.html:12
-msgid "Local Library New Title"
-msgstr ""
+#: .\catalog\templates\catalog\bookinstance_list_borrowed_user.html:4
+#: .\catalog\templates\catalog\borrowed_books.html:4
+msgid "Borrowed books"
+msgstr "Sách đã được mượn"
+
+#: .\catalog\templates\catalog\bookinstance_list_borrowed_user.html:17
+#: .\catalog\templates\catalog\borrowed_books.html:18
+msgid "There are no books borrowed."
+msgstr "Không có sách nào được mượn"
 
 #: .\catalog\templates\index.html:16
 msgid "Local Library Home"
-msgstr ""
+msgstr "Trang chủ Thư viện Địa phương"
 
 #: .\catalog\templates\index.html:17
 msgid ""
 "Welcome to LocalLibrary, a website developed by <em>Mozilla Developer "
 "Network</em>!"
 msgstr ""
-"Chào mừng đến thư viện địa phương, trang web này được phát triển bởi <em>Mozilla Developer "
+"Chào mừng đến với Thư viện Địa phương, website được phát triển bởi <em>Mozilla Developer "
 "Network</em>!"
 
 #: .\catalog\templates\index.html:18
@@ -158,7 +196,7 @@ msgstr "Thư viện có các bản ghi sau:"
 
 #: .\catalog\templates\index.html:21
 msgid "Books:"
-msgstr "Sách:"
+msgstr "Sách"
 
 #: .\catalog\templates\index.html:22
 msgid "Copies:"
@@ -178,9 +216,9 @@ msgstr "Thể loại:"
 
 #: .\catalog\templates\index.html:26
 msgid "Books that contain a particular word 'Python':"
-msgstr "Sách có chứa một từ cụ thể 'Python'"
+msgstr "Sách có nội dung chứa từ cụ thể 'Python':"
 
-#: .\catalog\views.py:55 .\catalog\views.py:79
+#: .\catalog\views.py:66 .\catalog\views.py:90
 msgid "This is just some data"
 msgstr "Đây chỉ là một số dữ liệu"
 
