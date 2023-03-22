@@ -1,4 +1,5 @@
 # Used to generate URLs by reversing the URL patterns
+from django.forms import ModelForm
 import uuid  # Required for unique book instances
 import datetime
 from datetime import date
