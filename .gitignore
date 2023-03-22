@@ -1,5 +1,6 @@
 *.log
 *.pot
 *.pyc
+*.bak
 __pycache__
 db.sqlite3
