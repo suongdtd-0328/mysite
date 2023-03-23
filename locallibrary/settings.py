@@ -24,8 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-c06_)i*(1es!pz0jjg6%45msd_z*5t837k)d9$k7!sb8ey90dq'
-# SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = "cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag"
+
 SECRET_KEY = os.environ.get(
     'DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
 
@@ -33,17 +32,10 @@ SECRET_KEY = os.environ.get(
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['web-production-3640.up.railway.app', '127.0.0.1']
+# ALLOWED_HOSTS = ['web-production-3640.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['mylocallibrary.app', '127.0.0.1']
 
-# During development, you can instead set just the base URL
-# (you might decide to change the site a few times).
-# ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
-# For example, for a site URL is at 'web-production-3640.up.railway.app'
-# (replace the string below with your own site URL):
-CSRF_TRUSTED_ORIGINS = ['https://web-production-3640.up.railway.app']
-
-# During development/for this tutorial you can instead set just the base URL
-# CSRF_TRUSTED_ORIGINS = ['https://*.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://mylocallibrary.app']
 
 
 # Application definition
