@@ -26,16 +26,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = 'django-insecure-c06_)i*(1es!pz0jjg6%45msd_z*5t837k)d9$k7!sb8ey90dq'
 
 SECRET_KEY = os.environ.get(
-    'DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
+    'DJANGO_SECRET_KEY', 'django-insecure-c06_)i*(1es!pz0jjg6%45msd_z*5t837k)d9$k7!sb8ey90dq')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 # ALLOWED_HOSTS = ['web-production-3640.up.railway.app', '127.0.0.1']
-ALLOWED_HOSTS = ['mylocallibrary.app', '127.0.0.1']
+ALLOWED_HOSTS = ['mysite-production-366a.up.railway.app', '127.0.0.1']
 
-CSRF_TRUSTED_ORIGINS = ['https://mylocallibrary.app']
+SRF_TRUSTED_ORIGINS = [
+    'https://mysite-production-366a.up.railway.app']
 
 
 # Application definition
@@ -86,13 +87,23 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '00iD0wS9RzlqPa2fGbwC',
+        'HOST': 'containers-us-west-168.railway.app',
+        'PORT': '6481',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
