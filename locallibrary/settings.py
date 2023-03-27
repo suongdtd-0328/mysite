@@ -32,11 +32,10 @@ SECRET_KEY = os.environ.get(
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-# ALLOWED_HOSTS = ['web-production-3640.up.railway.app', '127.0.0.1']
 ALLOWED_HOSTS = ['mysite-production-366a.up.railway.app', '127.0.0.1']
 
-SRF_TRUSTED_ORIGINS = [
-    'https://mysite-production-366a.up.railway.app']
+CSRF_TRUSTED_ORIGINS = [
+    'https://mysite-production-366a.up.railway.app', 'https://mysite-production-366a.up.127.0.0.1']
 
 
 # Application definition
@@ -88,26 +87,26 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-# DATABASE_URL = os.getenv(
-#     "postgresql://postgres:00iD0wS9RzlqPa2fGbwC@containers-us-west-168.railway.app:6481/railway")
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',
-#         'USER': 'postgres',
-#         'PASSWORD': '00iD0wS9RzlqPa2fGbwC',
-#         'HOST': 'containers-us-west-168.railway.app',
-#         'PORT': '6481',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+DATABASE_URL = os.getenv(
+    "postgresql://postgres:00iD0wS9RzlqPa2fGbwC@containers-us-west-168.railway.app:6481/railway")
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '00iD0wS9RzlqPa2fGbwC',
+        'HOST': 'containers-us-west-168.railway.app',
+        'PORT': '6481',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -141,17 +140,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -174,16 +171,13 @@ LOGIN_REDIRECT_URL = '/'
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-# DATABASES = {
-#     "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=500),
-# }
-
 WSGI_APPLICATION = 'locallibrary.wsgi.application'
 
 # Static file serving.
 # http://whitenoise.evans.io/en/stable/django.html#django-middleware
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
+WHITENOISE_USE_FINDERS = True
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
 # STORAGES = {
 #     # ...
 #     "staticfiles": {
