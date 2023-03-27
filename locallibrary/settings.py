@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get(
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['mysite-production-366a.up.railway.app', 'mysite-production-719f.up.railway.app'
+ALLOWED_HOSTS = ['mysite-production-366a.up.railway.app', 'mysite-production-719f.up.railway.app',
                  '127.0.0.1', 'mysite-deloy.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
