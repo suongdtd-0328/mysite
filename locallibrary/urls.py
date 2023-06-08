@@ -30,3 +30,8 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path('catalog/', include('catalog.urls')),
 )
+# Add Django site authentication urls (for login, logout, password management)
+
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]

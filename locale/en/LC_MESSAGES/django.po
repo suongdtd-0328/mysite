@@ -1,56 +1,104 @@
-#: .\catalog\models.py:11
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-21 08:50+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\catalog\forms.py:11 .\catalog\models.py:135
+msgid "Enter a date between now and 4 weeks (default 3)."
+msgstr ""
+
+#: .\catalog\forms.py:18 .\catalog\models.py:120
+msgid "Invalid date - renewal in past"
+msgstr ""
+
+#: .\catalog\forms.py:23 .\catalog\models.py:125
+msgid "Invalid date - renewal more than 4 weeks ahead"
+msgstr ""
+
+#: .\catalog\models.py:15
 msgid "Name"
 msgstr ""
 
-#: .\catalog\models.py:21
+#: .\catalog\models.py:25
 msgid "title"
 msgstr ""
 
-#: .\catalog\models.py:28
+#: .\catalog\models.py:32
 msgid "summary"
 msgstr ""
 
-#: .\catalog\models.py:29 .\catalog\templates\catalog\book_detail.html:9
+#: .\catalog\models.py:33 .\catalog\templates\catalog\book_detail.html:9
 msgid "ISBN"
 msgstr ""
 
-#: .\catalog\models.py:49 .\catalog\templates\catalog\book_detail.html:11
+#: .\catalog\models.py:53 .\catalog\templates\catalog\book_detail.html:11
 msgid "Genre"
 msgstr ""
 
-#: .\catalog\models.py:57
+#: .\catalog\models.py:61
 msgid "imprint"
 msgstr ""
 
-#: .\catalog\models.py:61
+#: .\catalog\models.py:65
 msgid "Maintenance"
 msgstr ""
 
-#: .\catalog\models.py:62
+#: .\catalog\models.py:66
 msgid "On loan"
 msgstr ""
 
-#: .\catalog\models.py:63
+#: .\catalog\models.py:67
 msgid "Available"
 msgstr ""
 
-#: .\catalog\models.py:64
+#: .\catalog\models.py:68
 msgid "Reserved"
 msgstr ""
 
-#: .\catalog\models.py:67
+#: .\catalog\models.py:71
 msgid "status"
 msgstr ""
 
-#: .\catalog\models.py:85
+#: .\catalog\models.py:76
+msgid "Book availability"
+msgstr ""
+
+#: .\catalog\models.py:97
 msgid "first_name"
 msgstr ""
 
-#: .\catalog\models.py:86
+#: .\catalog\models.py:98
 msgid "last_name"
 msgstr ""
 
-#: .\catalog\templates\base_generic.html:6
+#: .\catalog\models.py:99
+msgid "birth"
+msgstr ""
+
+#: .\catalog\models.py:100
+msgid "died"
+msgstr ""
+
+#: .\catalog\models.py:133
+msgid "Renewal date"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:6 .\catalog\templates\index.html:12
 msgid "Local Library"
 msgstr ""
 
@@ -66,12 +114,44 @@ msgstr ""
 msgid "All authors"
 msgstr ""
 
-#: .\catalog\templates\base_generic.html:40
-#, python-format
-msgid ""
-"\n"
-"              Page %(page_obj.number)s of %(page_obj.paginator.num_pages)s.\n"
-"              "
+#: .\catalog\templates\base_generic.html:27
+msgid "User"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:28
+msgid "My Borrowed"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:29
+msgid "Logout"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:31
+msgid "Login"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:34
+msgid "Staff"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:35
+msgid "All Borrowed"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:49
+msgid "previous"
+msgstr ""
+
+#: .\catalog\templates\base_generic.html:53
+msgid "next"
+msgstr ""
+
+#: .\catalog\templates\catalog\author_confirm_delete.html:6
+msgid "Delete Author"
+msgstr ""
+
+#: .\catalog\templates\catalog\author_confirm_delete.html:8
+msgid "Are you sure you want to delete the author:"
 msgstr ""
 
 #: .\catalog\templates\catalog\author_detail.html:5
@@ -92,6 +172,14 @@ msgid ""
 "\n"
 "  There are no author in the library.\n"
 "  "
+msgstr ""
+
+#: .\catalog\templates\catalog\book_confirm_delete.html:6
+msgid "Delete Book"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_confirm_delete.html:8
+msgid "Are you sure you want to delete the books:"
 msgstr ""
 
 #: .\catalog\templates\catalog\book_detail.html:5
@@ -126,8 +214,28 @@ msgstr ""
 msgid "There are no books in the library."
 msgstr ""
 
-#: .\catalog\templates\index.html:12
-msgid "Local Library New Title"
+#: .\catalog\templates\catalog\book_renew_librarian.html:6
+msgid "Renew:"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_renew_librarian.html:7
+msgid "Borrower:"
+msgstr ""
+
+#: .\catalog\templates\catalog\book_renew_librarian.html:8
+msgid "Due date:"
+msgstr ""
+
+#: .\catalog\templates\catalog\borrowed_books.html:5
+msgid "Borrowed books"
+msgstr ""
+
+#: .\catalog\templates\catalog\borrowed_books.html:16
+msgid "Renew"
+msgstr ""
+
+#: .\catalog\templates\catalog\borrowed_books.html:24
+msgid "There are no books borrowed."
 msgstr ""
 
 #: .\catalog\templates\index.html:16
@@ -135,9 +243,7 @@ msgid "Local Library Home"
 msgstr ""
 
 #: .\catalog\templates\index.html:17
-msgid ""
-"Welcome to LocalLibrary, a website developed by <em>Mozilla Developer "
-"Network</em>!"
+msgid "Welcome to LocalLibrary, a website developed by"
 msgstr ""
 
 #: .\catalog\templates\index.html:18
@@ -169,10 +275,18 @@ msgid "Genres:"
 msgstr ""
 
 #: .\catalog\templates\index.html:26
-msgid "Books that contain a particular word 'Python':"
+msgid "Books that contain a particular word "
 msgstr ""
 
-#: .\catalog\views.py:55 .\catalog\views.py:79
+#: .\catalog\templates\index.html:29
+msgid "You have visited this page"
+msgstr ""
+
+#: .\catalog\templates\index.html:29
+msgid "time"
+msgstr ""
+
+#: .\catalog\views.py:72 .\catalog\views.py:96
 msgid "This is just some data"
 msgstr ""
 
